@@ -1,0 +1,127 @@
+function cekKhodam() {
+    const nameInput = document.getElementById('nameInput').value;
+    if (!nameInput) {
+        Swal.fire({
+            title: 'GAK BOLEH KOSONG!😡',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+        return;
+    }
+    document.getElementById('loading').style.display = 'block'; // Tampilkan spinner
+    setTimeout(() => {
+        const khodams = [
+            { name: "ayam geprek" },
+            { name: "mie ayam" },
+            { name: "nasi goreng" },
+            { name: "mio mirza" },
+            { name: "roh baik" },
+            { name: "roh hitam" },
+            { name: "teh manis solo" },
+            { name: "telur asin" },
+            { name: "bebek" },
+            { name: "whiskas" },
+            { name: "ayam warna warni" },
+            { name: "facebook" },
+            { name: "tiktok" },
+            { name: "korek" },
+            { name: "monitor" },
+            { name: "crot di dalem" },
+            { name: "kodomo" },
+            { name: "oli gardan" },
+            { name: "oli samping" },
+            { name: "free fire" },
+            { name: "alok" },
+            { name: "kelly" },
+            { name: "keramik alfamart" },
+            { name: "siluman based" },
+            { name: "programmer" },
+            { name: "ps 4" },
+            { name: "fuad" },
+            { name: "si imut" },
+            { name: "ayam cabe ijo" },
+            { name: "teh pucuk" },
+            { name: "karbu vespa" },
+            { name: "chatgpt" },
+            { name: "celana sobek" },
+            { name: "sempak firaun" },
+            { name: "pepsodent" },
+            { name: "es buah" },
+            { name: "kera hitam" },
+            { name: "vicidior" },
+            { name: "Rubicon" },
+            { name: "dudul" },
+            { name: "kunci stang" },
+            { name: "ksatria kegelapan" },
+            { name: "ciki jaguar" },
+            { name: "ayam broiler" },
+            { name: "helm scoopy" },
+            { name: "knalpot beat" },
+            { name: "kapal karam" },
+            { name: "the gladiator" },
+            { name: "kursi goyang mas fuad" },
+            { name: "basreng" },
+            { name: "cimol" },
+            { name: "dino asli sunda" },
+            { name: "vixion racing" },
+            { name: "mio mirza" },
+            { name: "karbu mio" },
+            { name: "gonzales" },
+            { name: "tanah sengketa" },
+            { name: "macan Kemayoran" },
+            { name: "sendal jepit" },
+            { name: "batagor isi ayam" },
+            { name: "piring gacoan" },
+            { name: "sofa terbang" },
+            { name: "mia khalifa" },
+            { name: "momo hirai" },
+            { name: "twice" },
+            { name: "aespa" },
+            { name: "geforce rtx 4060" },
+            { name: "beat karbu" },
+            { name: "kentungan pos ronda" },
+            { name: "megalodon asli jawa" },
+            { name: "sedot wc" },
+            { name: "pocong mewinh" },
+            { name: "nasi goreng" },
+            { name: "mie ayam" },
+            { name: "ketoprak" },
+            { name: "cicak" },
+            { name: "instagram" },
+            { name: "bunga angrek asli pontianak" },
+            { name: "tahu isi" },
+            { name: "baso beranak" },
+            { name: "tumbler" },
+            { name: "singkong bakar" },
+            { name: "gelombang laut" },
+            { name: "saber roam" },
+            { name: "alucard" },
+            { name: "raja kikir" },
+            { name: "ratu kikir" },
+            { name: "orang ganteng, waspadalah" },
+            { name: "raden kian jantan" },
+            { name: "sprei bunga" },
+            { name: "king madrid" },
+            { name: "udang goreng" },
+            { name: "tahu sumedang" },
+            { name: "javascript" },
+            { name: "ombak banyuwangi" },
+            { name: "hantu skibidi" },
+            { name: "modem wifi" },
+            { name: "fanum tax" },
+            { name: "suki" },
+            { name: "raja sigma" },
+            { name: "keluh basah lele berulah" },
+            { name: "ratu gyatt" }
+];
+        const khodam = khodams[Math.floor(Math.random() * khodams.length)];
+        document.getElementById('khodamName').innerText = `${khodam.name}`;
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('loading').style.display = 'none'; // Sembunyikan spinner
+    }, 2000); // Delay untuk simulasi loading
+}
+
+function resetForm() {
+    document.getElementById('nameInput').value = '';
+    document.getElementById('result').style.display = 'none';
+}
